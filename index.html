@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>tpbstats</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="The most popular movies on The Pirate Bay during the last 24 hours.">
+	<meta name="keywords" content="The Pirate Bay, statistics, popular, movies, tpbstats">
 </head>
 <style>
 
@@ -20,20 +23,37 @@ th, td {
 
 </style>
 <body>
-<h1>TPBSTATS</h1>
-<p>The most popular movies on The Pirate Bay during the last 24 hours.</p>
+<header>
+	<h1>tpbstats</h1>
+	<p>The most popular movies on The Pirate Bay during the last 24 hours.</p>
+</header>
+<main></main>
+<footer>
+	<p>Made with data from <a href="http://thepiratebay.se" title="The Pirate Bay">The Pirate Bay</a> and <a href="http://jpatterson.me/the-pirate-beacon/" title="The Pirate Beacon">The Pirate Beacon</a>.</p>
+	<p>Powered by <a href="https://github.com/tpbstats" title="tpbstats on Github">GitHub</a>.</p>
+</footer>
 <script>
 
 
 
-var json = [{"id":1790864,"imdb_rating":73,"imdb_votes":63697,"leechers":"29721","peers":"115529","released":"2014-09-19T00:00:00Z","scrape":1,"seeders":"85808","title":"The Maze Runner","tomato_meter":63,"tomato_reviews":142,"tomato_user_meter":74,"tomato_user_reviews":63942},{"id":2015381,"imdb_rating":84,"imdb_votes":275806,"leechers":"8569","peers":"58775","released":"2014-08-01T00:00:00Z","scrape":1,"seeders":"50206","title":"Guardians of the Galaxy","tomato_meter":90,"tomato_reviews":250,"tomato_user_meter":94,"tomato_user_reviews":213337},{"id":2872718,"imdb_rating":83,"imdb_votes":14849,"leechers":"19105","peers":"49523","released":"2014-10-31T00:00:00Z","scrape":1,"seeders":"30418","title":"Nightcrawler","tomato_meter":94,"tomato_reviews":158,"tomato_user_meter":88,"tomato_user_reviews":27526},{"id":1291150,"imdb_rating":62,"imdb_votes":59730,"leechers":"8358","peers":"41084","released":"2014-08-08T00:00:00Z","scrape":1,"seeders":"32726","title":"Teenage Mutant Ninja Turtles","tomato_meter":21,"tomato_reviews":132,"tomato_user_meter":57,"tomato_user_reviews":113232},{"id":2713180,"imdb_rating":80,"imdb_votes":57395,"leechers":"7719","peers":"40671","released":"2014-10-17T00:00:00Z","scrape":1,"seeders":"32951","title":"Fury","tomato_meter":78,"tomato_reviews":206,"tomato_user_meter":88,"tomato_user_reviews":75482},{"id":2103281,"imdb_rating":79,"imdb_votes":166096,"leechers":"6177","peers":"35347","released":"2014-07-11T00:00:00Z","scrape":1,"seeders":"29170","title":"Dawn of the Planet of the Apes","tomato_meter":90,"tomato_reviews":242,"tomato_user_meter":91,"tomato_user_reviews":180024},{"id":2397535,"imdb_rating":76,"imdb_votes":945,"leechers":"5346","peers":"32506","released":"2014-08-28T00:00:00Z","scrape":1,"seeders":"27160","title":"Predestination","tomato_meter":82,"tomato_reviews":22,"tomato_user_meter":95,"tomato_user_reviews":2150},{"id":2872732,"imdb_rating":65,"imdb_votes":114266,"leechers":"7363","peers":"31712","released":"2014-07-25T00:00:00Z","scrape":1,"seeders":"24349","title":"Lucy","tomato_meter":66,"tomato_reviews":194,"tomato_user_meter":48,"tomato_user_reviews":112294},{"id":829150,"imdb_rating":63,"imdb_votes":51683,"leechers":"6813","peers":"27432","released":"2014-10-10T00:00:00Z","scrape":1,"seeders":"20618","title":"Dracula Untold","tomato_meter":23,"tomato_reviews":108,"tomato_user_meter":61,"tomato_user_reviews":37668},{"id":1772264,"imdb_rating":69,"imdb_votes":2545,"leechers":"8037","peers":"25313","released":"2014-10-24T00:00:00Z","scrape":1,"seeders":"17275","title":"Stonehearst Asylum","tomato_meter":50,"tomato_reviews":28,"tomato_user_meter":50,"tomato_user_reviews":2295}];
-console.log(json);
+var topMovie = [{"id":1790864,"imdb_rating":73,"imdb_votes":63697,"leechers":"29721","peers":"115529","released":"2014-09-19T00:00:00Z","scrape":1,"seeders":"85808","title":"The Maze Runner","tomato_meter":63,"tomato_reviews":142,"tomato_user_meter":74,"tomato_user_reviews":63942},{"id":2015381,"imdb_rating":84,"imdb_votes":275806,"leechers":"8569","peers":"58775","released":"2014-08-01T00:00:00Z","scrape":1,"seeders":"50206","title":"Guardians of the Galaxy","tomato_meter":90,"tomato_reviews":250,"tomato_user_meter":94,"tomato_user_reviews":213337},{"id":2872718,"imdb_rating":83,"imdb_votes":14849,"leechers":"19105","peers":"49523","released":"2014-10-31T00:00:00Z","scrape":1,"seeders":"30418","title":"Nightcrawler","tomato_meter":94,"tomato_reviews":158,"tomato_user_meter":88,"tomato_user_reviews":27526},{"id":1291150,"imdb_rating":62,"imdb_votes":59730,"leechers":"8358","peers":"41084","released":"2014-08-08T00:00:00Z","scrape":1,"seeders":"32726","title":"Teenage Mutant Ninja Turtles","tomato_meter":21,"tomato_reviews":132,"tomato_user_meter":57,"tomato_user_reviews":113232},{"id":2713180,"imdb_rating":80,"imdb_votes":57395,"leechers":"7719","peers":"40671","released":"2014-10-17T00:00:00Z","scrape":1,"seeders":"32951","title":"Fury","tomato_meter":78,"tomato_reviews":206,"tomato_user_meter":88,"tomato_user_reviews":75482},{"id":2103281,"imdb_rating":79,"imdb_votes":166096,"leechers":"6177","peers":"35347","released":"2014-07-11T00:00:00Z","scrape":1,"seeders":"29170","title":"Dawn of the Planet of the Apes","tomato_meter":90,"tomato_reviews":242,"tomato_user_meter":91,"tomato_user_reviews":180024},{"id":2397535,"imdb_rating":76,"imdb_votes":945,"leechers":"5346","peers":"32506","released":"2014-08-28T00:00:00Z","scrape":1,"seeders":"27160","title":"Predestination","tomato_meter":82,"tomato_reviews":22,"tomato_user_meter":95,"tomato_user_reviews":2150},{"id":2872732,"imdb_rating":65,"imdb_votes":114266,"leechers":"7363","peers":"31712","released":"2014-07-25T00:00:00Z","scrape":1,"seeders":"24349","title":"Lucy","tomato_meter":66,"tomato_reviews":194,"tomato_user_meter":48,"tomato_user_reviews":112294},{"id":829150,"imdb_rating":63,"imdb_votes":51683,"leechers":"6813","peers":"27432","released":"2014-10-10T00:00:00Z","scrape":1,"seeders":"20618","title":"Dracula Untold","tomato_meter":23,"tomato_reviews":108,"tomato_user_meter":61,"tomato_user_reviews":37668},{"id":1772264,"imdb_rating":69,"imdb_votes":2545,"leechers":"8037","peers":"25313","released":"2014-10-24T00:00:00Z","scrape":1,"seeders":"17275","title":"Stonehearst Asylum","tomato_meter":50,"tomato_reviews":28,"tomato_user_meter":50,"tomato_user_reviews":2295}];
+var time = "2014-12-05T19:38:47.607749265Z";
+
+
+
+var header = document.getElementsByTagName('header')[0];
+var main = document.getElementsByTagName('main')[0];
+var footer = document.getElementsByTagName('footer')[0];
 
 
 
 function getCell(type, value) {
 	var cell = document.createElement(type);
-	cell.appendChild(document.createTextNode(value));
+	
+	
+	
+	
+	cell.innerHTML = value;
 	return cell;
 }
 
@@ -44,43 +64,52 @@ function getRow(type, array) {
 	return row;
 }
 
-function drawTable(json) {
+function getTable(objects) {
 	var table = document.createElement('table');
-	var display = {
-		"title": "Title",
-		"leechers": "Leechers",
-		"seeders": "Seeders",
-		"peers": "Peers",
-		"imdb_rating": "IMDB",
-		"tomato_meter": "RT"
-	};
-	var functions = {
-		"title": null,
-		"leechers": null,
-		"seeders": null,
-		"peers": null,
-		"imdb_rating": function (x) {return x/10},
-		"tomato_meter": null
-	}
-	var columns = [];
-	for (var key in display) columns.push(display[key]);
-	table.appendChild(getRow("th", columns));
-	json.forEach(function(object) {
+	var columns = [
+		'#',
+		'Title',
+		'Seeders',
+		'Leechers',
+		'Peers',
+		'IMDB',
+		'RT'
+	];
+	table.appendChild(getRow('th', columns));
+	for (var i = 0; i < objects.length; i++) {
+		var object = objects[i];
 		var row = [];
-		for (var key in display) {
-			if (functions[key])
-				row.push(functions[key](object[key]));
-			else
-				row.push(object[key]);
-		}
-		table.appendChild(getRow("td", row));
-	});
-	document.body.appendChild(table);
+		row.push(i + 1);
+		var title = object['title'];
+		var url = 'http://www.imdb.com/title/tt' + object['id'];
+		row.push('<a href="' + url + '" title="' + title + '">' + title + '</a>');
+		row.push(object['seeders']);
+		row.push(object['leechers']);
+		row.push(object['peers']);
+		row.push(object['imdb_rating'] / 10);
+		row.push(object['tomato_meter']);
+		table.appendChild(getRow('td', row));
+	}
+	return table;
 }
 
 
 
-drawTable(json);
+main.appendChild(getTable(topMovie));
+
+
+
+var date = new Date(time);
+var timeDisplay = document.createElement('p');
+function timeUpdate() {
+	var ms = new Date().getTime() - date.getTime();
+	var minutes = Math.round(ms / 1000 / 60);
+	var text = 'Updated ' + minutes + ' minutes ago.';
+	timeDisplay.textContent = text;
+}
+timeUpdate();
+setInterval(timeUpdate, 60 * 1000);
+footer.insertBefore(timeDisplay, footer.firstChild);
 
 </script>
 </body>
